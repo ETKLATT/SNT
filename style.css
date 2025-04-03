@@ -1,0 +1,307 @@
+ /* Styles généraux pour le corps de la page */
+ body {
+    font-family: Arial, sans-serif;
+    display: flex; /* Utilisation de flexbox pour organiser le sommaire à gauche et le contenu à droite */
+    margin: 0; /* Suppression des marges par défaut du navigateur */
+    text-align: justify;
+    background-image: url('wallpaper.jpg');
+}
+
+.white-text {
+    color: white; /* Définit la couleur du texte en blanc uniquement pour ce paragraphe */
+}
+
+/* Styles pour la barre latérale */
+.sidebar {
+    width: 200px; /* Largeur du menu latéral */
+    background: #2c3e50; /* Couleur de fond sombre */
+    padding: 20px; /* Espacement intérieur */
+    height: 100vh; /* Hauteur pleine page */
+    box-shadow: 2px 0 5px rgba(0,0,0,1); /* Ombre pour effet de relief */
+}
+
+/* Styles pour les boutons du sommaire */
+.button {
+    display: block; /* Affichage en bloc pour occuper toute la largeur */
+    background: #3498db; /* Couleur de fond bleue */
+    color: white; /* Texte en blanc */
+    text-decoration: none; /* Suppression du soulignement des liens */
+    padding: 15px; /* Espacement intérieur */
+    margin: 10px 0; /* Marge entre les boutons */
+    text-align: center; /* Centrage du texte */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background 0.3s; /* Animation fluide sur le changement de couleur */
+    pointer-events: auto; /* Assure que le bouton est cliquable */
+}
+
+/* Changement de couleur au survol des boutons */
+.button:hover {
+    background: #1c5980;
+}
+
+/* Styles pour la zone de contenu principal */
+.content {
+    flex: 1; /* Prend toute la place restante */
+    padding: 20px; /* Espacement intérieur */
+}
+
+
+.container {
+    max-width: 800px;
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    font-family: Arial, sans-serif;
+}
+
+
+h1 {
+    font-size: 24px;
+    background: #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    color: #0066cc;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 22px;
+}
+
+
+.red {
+    color: rgb(145, 0, 0);
+}
+
+.blue {
+    color: #3498db;
+}
+
+.green {
+    color: #27ae60;
+}
+
+.image {
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+/* Espacement entre les sections */
+.remark {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.remarkgreen {
+    background: #e8f5e9;
+    padding: 10px;
+    border-left: 5px solid green;
+    margin-top: 15px;
+}
+
+.remarkred {
+    background-color: rgb(103, 0, 0);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.remarkred span {
+    color: rgb(255, 2, 2); /* Couleur rouge pour "ATTENTION" */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cours {
+    background-color: rgb(45, 115, 129); 
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-weight: bold;
+    border: 2px solid rgb(86, 227, 255); /* Bordure plus claire */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    position: relative;
+    max-width: 600px; /* Pour éviter que ce soit trop large */
+}
+
+.cours-titre {
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: rgb(0, 4, 85);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cours span {
+    color: rgb(255, 100, 100); /* Rouge clair */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+   
+.code-noir {
+    color: black;
+    background-color: transparent;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+/* Style du sommaire avec des titres plus grands et en gras */
+.summary-list {
+    list-style: none;
+    padding: 0;
+}
+
+.summary-list li {
+    font-size: 24px; /* Plus grand */
+    font-weight: bold; /* En gras */
+    margin: 10px 0;
+}
+
+/* Style des onglets */
+details {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    
+}
+
+details p,
+details ul,
+details h1,
+details h2 {
+    margin-left: 20px; /* Ajoute une marge à gauche */
+    margin-right: 20px; /* Ajoute une marge à droite */
+}
+
+summary {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+summary:hover {
+    background-color: #ffffff;
+}
+
+/* Style pour le contenu de l'onglet */
+details[open] summary {
+    background-color: #000000;
+}
+
+details p, details ul, details ol {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+details img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+
+/* Marge pour les titres dans le contenu */
+
+
+
+
+.footer {
+    position: fixed; /* Fixe le bandeau en bas de la page */
+    bottom: 0;
+    width: 100%; /* Prend toute la largeur de la page */
+    background-color: #020b40b6; /* Fond sombre */
+    color: white; /* Texte en blanc */
+    text-align: center; /* Centrer le texte */
+    padding: 10px 0; /* Ajoute un peu d'espace autour du texte */
+    font-size: 16px; /* Taille du texte */
+    font-family: Arial, sans-serif; /* Police simple */
+}
+
+
+
+
+.gif-container {
+    text-align: center; /* Centrer l'image sur la page */
+    margin-top: 30px; /* Ajoute un peu d'espace autour de l'image */
+}
+
+.gif {
+    width: 250px; /* Définit une largeur spécifique pour l'animation */
+    height: auto; /* La hauteur s'ajustera automatiquement pour garder les proportions */
+    border-radius: 10px; /* Facultatif : pour donner des coins arrondis à l'image */
+    display: block; /* Force l'image à être affichée comme un bloc */
+    margin: 0 auto; /* Centrer le GIF horizontalement */
+    text-align: center; /* Centrer l'image sur la page */
+    margin-top: 30px; /* Ajoute un peu d'espace autour de l'image */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    height: 400px; 
+}
+
+
+
+
+ul {
+    text-align: left;
+}
+
+code {
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 16px;
+    display: block;
+    margin: 10px 0;
+    white-space: pre-wrap;
+}
+
+.step {
+    margin-top: 20px;
+}
+
+.step h2 {
+    color: #007acc;
+}
+
+p {
+    font-size: 18px;
+}
+
+        
+
+        
+
+        
+
+    
+
+
+    /*body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}*/

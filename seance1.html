@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Web : séance 1</title>
+    <!-- Inclusion d'un fichier CSS externe (commenté ici car le CSS est intégré directement) -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">   
+        
+<img src="Web logo.png" alt="Logo Web" class="image" width="200"> 
+        <!-- Premier onglet : Internet en deux pages -->
+        <details id="section1">
+            <summary><span class="blue">Internet en bref</span></summary>
+            <p>Avant de parler du <span class="blue">Web</span>, il faut peut-être clarifier la différence avec <span class="blue">Internet</span>.</p>
+    
+            <h2>Qu’est-ce qu’un réseau informatique ?</h2>
+            <ul>
+                <li>
+                    Un <strong>réseau informatique</strong> est un ensemble d’équipements informatiques (ordinateurs, serveurs…) reliés entre eux de façon à pouvoir échanger des informations. Le <strong>switch</strong> (commutateur) permet de relier entre eux les appareils d’un même réseau. Il agit comme un aiguillage.
+                </li>
+            </ul>
+            
+           
+            <h2>Qu’est-ce que l’Internet ?</h2>
+            <ul>
+                <li>
+                    <span class="blue"><strong>Internet</strong></span> est le réseau informatique mondial accessible au public. Il permet donc de faire communiquer entre eux les réseaux informatiques qui y sont connectés. Internet est donc un <strong>réseau de réseaux informatiques</strong>.
+                </li>
+                <li>
+                    Si l’un des ordinateurs du réseau A veut consulter une page Web accessible via le serveur situé sur le réseau B, une communication va devoir s’établir entre le réseau A et le réseau B.
+                </li>
+            </ul>
+            <img src="reseaux.png" alt="Schéma des réseaux A et B" title="Schéma des réseaux A et B" class="image">
+    
+            <h2>Protocoles et routeurs</h2>
+            <ul>
+                <li>
+                    Pour permettre cette communication, plusieurs règles de fonctionnement ont été édictées : les <strong>protocoles</strong>. Cette communication devra passer par des équipements particuliers qu’on nomme les <strong>routeurs</strong>.
+                </li>
+                <li>
+                    Comme on le voit sur le schéma, il n’existe pas de chemin unique pour passer du réseau A au réseau B.
+                </li>
+                <li>
+                    Une <strong>Box fait office à la fois de switch et de routeur</strong>.
+                </li>
+            </ul>
+            
+            <p class="remark"><span class="green"><strong>Remarque :</strong></span> en réalité, votre box n’est pas directement reliée à Internet. Avant le routeur de la box se trouve le <strong>modem</strong>.</p>
+        </details>
+
+        <!-- Deuxième onglet : Le Web, un ensemble de documents hypertextes -->
+        <details id="section2">
+            <summary><span class="blue">Le Web, un ensemble de documents hypertextes</span></summary>
+            <p>Le Web est l'une des applications qui utilisent Internet pour transmettre leurs données d'une machine à une autre.</p>
+            <ul>
+                <li>Le Web est constitué de l'ensemble des documents hypertextes auxquels il donne accès.</li>
+                <li>On relie un document à un autre à l'aide d'un lien, permettant de basculer vers un nouveau contenu hypertexte.</li>
+            </ul>
+
+            <div class="video-container">
+            <video width="640" height="360" controls>
+                <source src="Difference.mp4" type="video/mp4">
+            </video>
+            </div>
+
+
+            <p>Sur Capytale, utilisez le code 8535-6205286 et répondez au QCM.</p>
+        </details>
+
+        <!-- Troisième onglet : Historique du Web -->
+        <details id="section3">
+            <summary><span class="blue">Historique du Web</span></summary>
+            <p>A l'époque, en 1989, Tim Berners-Lee travaille au CERN, il est ennuyé par la difficulté de partager des informations...</p>
+            <p>Il propose alors de créer un projet de partage d'informations basé sur la consultation de documents hypertextes.</p>
+            <img src="Tim.jpg" alt="Tim Berners-Lee" title="Tim Berners-Lee" class="image">
+            <p>Clique <a href="https://www.youtube.com/watch?v=YVn7jrDYjUQ" target="_blank">ici</a> pour découvrir l'histoire du web en vidéo, et n'oublie pas de répondre aux questions sur la fiche imprimée.</p>
+         </details>
+
+        <!-- Troisième onglet : Découverte HTML -->
+        <details id="section4">
+            <summary><span class="blue">Le fonctionnement d'un site web</span></summary>
+            <p>Le langage HTML est un langage informatique à la base du fonctionnement de tous les sites web. 
+                Quand vous consultez un site avec votre navigateur, l'ordinateur se base sur ce qu'on lui a expliqué 
+                en HTML pour savoir ce qu'il doit afficher. 
+                <p>Un <strong>navigateur</strong> est un programme qui interprète le langage HTML et affiche les pages Web :</p>
+                <img src="navigateur.png" alt="navigateur" class="image">
+                
+                <p><strong><u>HTML (HyperText Markup Language) :</u></strong> Il a été créé en 1991 lors du lancement du Web. Son rôle est 
+                de gérer et organiser le contenu. C'est donc en HTML que vous écrirez ce qui doit être affiché sur la 
+                page : du texte, des liens, des images…  </p>
+                <p><u><strong>HTML 5 :</strong></u> C'est la dernière version. De plus en plus répandue, elle fait beaucoup parler d'elle car elle 
+                apporte de nombreuses améliorations comme la possibilité d'inclure facilement des vidéos, un 
+                meilleur agencement du contenu, de nouvelles fonctionnalités pour les formulaires, etc. C'est cette 
+                version que nous allons apprendre. </p>
+
+            <p>Clique <a href="https://www.youtube.com/watch?v=YsLZGujLkpY" target="_blank">ici</a> pour découvrir un peu mieux ce langage HTML</p>
+            <p>Puis <a href="https://www.youtube.com/watch?v=DPD1TLLEiQ8" target="_blank">ici</a> pour découvrir un peu le langage CSS qui viendra completer le HTML</p>
+            
+        </details>
+
+        <details id="section5">
+            <summary><span class="blue">Le HTML un langage de programmation ?</span></summary>
+            
+            <p>
+                Le <strong>HTML</strong> (HyperText Markup Language) n'est pas un langage de programmation. 
+                C'est un langage de balisage utilisé pour structurer une page web. 
+                Il permet de définir les éléments visibles comme les titres, les paragraphes, les images ou encore les boutons. 
+                Cependant, <strong>HTML seul ne permet pas d’interactions dynamiques</strong> : une fois affichée, la page reste statique.
+            </p>
+        
+            <p>
+                C’est là qu’intervient <strong>JavaScript</strong>. JavaScript est un <em>langage de programmation</em> qui ajoute du dynamisme aux pages web. 
+                Grâce à lui, une page peut réagir aux actions de l’utilisateur, modifier son contenu sans être rechargée, ou encore créer des animations et des jeux interactifs.
+            </p>
+        
+            <h3>🎮 L'exemple du Snake ci-dessous illustre parfaitement cette différence :</h3>
+            <ul>
+                <li><strong>HTML</strong> sert à organiser la page et afficher le jeu.</li>
+                <li><strong>CSS</strong> permet d'améliorer l'apparence, comme les couleurs et la mise en page.</li>
+                <li><strong>JavaScript</strong> est responsable de <em>toute la logique du jeu</em> : il détecte quand vous appuyez sur les touches du clavier, fait bouger le serpent, gère les collisions et met à jour le score.</li>
+            </ul>
+        
+            <p>
+                💡 Sans JavaScript, le jeu Snake ne fonctionnerait pas ! Il n’y aurait qu’un simple rectangle statique, sans aucun mouvement.
+            </p>
+        
+            <p>
+                🎮 <strong>À vous de jouer !</strong> Cliquez sur <em>"Lancer la partie"</em> et essayez d’atteindre 10 points pour débloquer le code secret ! 🚀
+            </p>
+            
+    
+            <button id="startButton">Lancer la partie</button>
+            <canvas id="gameCanvas" width="400" height="400" style="display: none;"></canvas>
+            <script src="snake.js"></script>
+
+            <div style="height: 500px;"></div>
+
+        </details>
+
+    
+    
+</div>
+
+    <div style="position: fixed; bottom: 0; width: 100%; background-color: #333; color: white; text-align: center; padding: 10px;">
+        <a href="index.html" style="color: #7e7e7e; text-decoration: none;">Retour à la page principale</a>
+    </div>
+
+    
+
+</body>
+</html>

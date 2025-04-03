@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNT: Le Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="seance1.html" class="button" >Séance 1</a>
+        <a href="#" class="button" onclick="demanderCode('seance2.html')">Séance 2</a>
+        <a href="#" class="button" onclick="demanderCode('seance3.html')">Séance 3</a>
+        <a href="#" class="button" onclick="demanderCode('seance4.html')">Séance 4</a>
+    </div>
+    
+    <div class="content">
+        <h1>SNT : Le web</h1>
+        <p class="white-text"><strong>Bienvenue sur mon site de SNT spécial Web. 
+            Dans cette première séance, nous allons poser les bases de notre parcours et découvrir les fondamentaux du web et de l'informatique. 
+            À partir de la Séance 2, nous commencerons à aborder les aspects pratiques du codage en HTML, avec pour objectif final de créer et de structurer une page web complète lors des séances 3 et 4. 
+            Ces séances vont nous permettre de comprendre comment le web fonctionne, de découvrir les outils et langages qui le composent, et de développer les compétences nécessaires pour concevoir un site web de A à Z.</strong>
+            <br><br> Cliquez sur une séance pour y accéder.</p>
+        
+        <div class="gif-container">
+            <img src="trex.gif" alt="T-rex" class="gif">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Étienne Klatt - Lycée Victor Hugo</p>
+    </div>
+
+    
+    <script>
+        function demanderCode(page) {
+            var code = prompt("Veuillez entrer le mot de passe pour accéder à cette séance:");
+            if (code === "4321") {
+                window.location.href = page;
+            } else {
+                alert("Mot de passe incorrect. Essayez à nouveau.");
+            }
+        }
+    </script>
+
+     <!-- Inclusion du fichier JavaScript -->
+     <script src="inactivity.js"></script>
+
+</body>
+</html>

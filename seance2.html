@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Séance 2 : Créer ta première page Web</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Désactive la sélection de texte
+        document.addEventListener('selectstart', function(event) {
+            event.preventDefault();
+        });
+    
+        // Désactive le copier-coller
+        document.addEventListener('copy', function(event) {
+            event.preventDefault();
+        });
+        document.addEventListener('cut', function(event) {
+            event.preventDefault();
+        });
+        document.addEventListener('paste', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</head>
+
+<body>
+
+
+    
+    <div class="container">
+        <h1>TP Séance 2 : Créer ta première page Web</h1>
+        
+        <p>Durée estimée : 1h30</p>
+        
+        <p>Dans cette séance, tu vas créer une page web simple en HTML. Chaque étape te guidera pour que tu comprennes comment fonctionne chaque balise HTML que nous allons utiliser. À la fin de cette séance, tu auras une page fonctionnelle à toi !</p>
+
+        <p><strong>Au préalable : </strong></p>
+<p>Tu dois créer un dossier de travail sur votre ordinateur mais pas n’importe où 
+sinon tu ne pourras plus t'y retrouver !  
+Donnez un nom (le tiens de préférence !) à ton dossier en évitant les accents, 
+espaces et caractères spéciaux.  
+</p>
+<p><span style="color: green; font-size: inherit;">Exemple</span>: coraline</p>
+<p><strong><span style="color: red; font-size: inherit;">IMPORTANT</span> :</strong> Tu devras mettre dans ce dossier toutes les images et fichiers qui seront utilisés dans ta page web. </p>
+
+<!--<p><strong>Pour démarrer il te faut : </strong>
+<p>Notepad++   (ou un autre éditeur de texte, pour écrire le code de ta page web)</p>
+<p>Mozilla firefox, ou un autre navigateur web (pour visualiser ta page web)  </p>
+<p>Fichiers à éditer : </p>
+<p>Avec notepad++ tu vas devoir éditer deux fichiers , à savoir : </p>
+<p>index.html    (contenu de votre page web)   </p>
+<p>style.css       (mise en forme)   </p> -->
+
+ 
+
+        <div class="step">
+            <h2>Étape 1 : Créer un fichier HTML</h2>
+            <p>Ouvre ton éditeur de texte. Crée un nouveau fichier et nomme-le : <code>Prénom_NOM.html</code></p>
+            <p class="remark"><span class="green"><strong>Remarque :</strong></span> Nomme le avec TON nom et TON prénom, pas Prénom_NOM !</p>
+        </details>
+        </div>
+
+        <div class="cours">
+            <div class="cours-titre">Cours</div>
+            <h2>🔹 Les balises HTML</h2>
+            <p>
+                Les pages HTML sont composées de balises. Celles-ci sont invisibles à l'écran 
+                mais elles permettent à l'ordinateur de comprendre ce qu'il doit afficher.
+            </p>
+            <p>
+                Les balises sont entourées de chevrons <code class="code-noir">&lt; et &gt;</code> par exemple : 
+                <code class="code-noir">&lt;balise&gt;</code> Elles indiquent la nature du texte qu'elles encadrent, 
+                comme un titre, une image ou un paragraphe.
+            </p>
+            <h3>📌 Les types de balises :</h3>
+            <ul>
+                <li><strong>✅ Balises en paires :</strong> Elles s'ouvrent et se ferment, comme 
+                    <code class="code-noir">&lt;h1&gt;Titre&lt;/h1&gt;</code>
+                </li>
+                <li><strong>✅ Balises orphelines :</strong> Elles n'ont pas besoin d'être fermées, 
+                    comme <code class="code-noir">&lt;img src="photo.jpg" /&gt;</code>
+                </li>
+            </ul>
+            <h3>⚙️ Les attributs :</h3>
+            <p>
+                Les attributs complètent les balises en donnant des informations supplémentaires. 
+                Exemple : <code class="code-noir">&lt;img src="photo.jpg" alt="Une image" /&gt;</code>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Étape 2 : Définir la structure de base de la page</h2>
+            <p>Une page HTML commence toujours par une déclaration de type et une structure de base. 
+                Recopie ce code dans ton fichier.
+                Attention à bien recopier sinon cela risque de ne pas marcher.<code>index.html</code></p>
+            
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Ma Première Page Web&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        Mon texte
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+
+            <p>Enregistre et visualise le résultat dans le navigateur (firefox)</p>  
+            <p>(vous devez voir apparaître juste " Ma première page web " (dans l'onglet)  et "Mon texte" (dans la 
+            page))</p>  
+            <p><strong><span style="color: red; font-size: inherit;">Important : pour la suite, insére ton code entre les balises  &lt;body&gt; </span></strong>
+
+            <p>Voici ce que chaque élément fait :</p>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>  La toute première ligne s'appelle le doctype. Elle est indispensable car c'est elle qui 
+                    indique qu'il s'agit bien d'une page web HTML. 
+                    Ce n'est pas vraiment une balise comme les autres (elle commence par !)</li>
+                <li><code>&lt;/html&gt;</code>C'est la balise principale du code. Elle englobe tout le contenu de votre page. Comme vous 
+pouvez le voir, la balise fermante </html> se trouve tout à la fin du code ! </li>
+
+                <li><code>&lt;head&gt;</code> L'en-tête &lt;head&gt; : cette section donne quelques informations générales sur la page comme 
+                    son titre, l'encodage (pour la gestion des caractères spéciaux), etc. Cette section est 
+                    généralement assez courte. Les informations que contient l'en-tête ne sont pas affichées 
+                    sur la page, ce sont simplement des informations générales à destination de l'ordinateur.</li>
+                <li><code>&lt;body&gt;</code> Le corps &lt;body&gt; : c'est là que se trouve la partie principale de la page. Tout ce que nous 
+                    écrirons ici sera affiché à l'écran. C'est à l'intérieur du body que nous écrirons la majeure 
+                    partie de notre code. Pour le moment, le body est (quasi) vide. </li>
+
+                <li><code>&lt;title&gt;</code> C'est le titre de la page. 
+                    Le titre ne s'affiche pas dans votre page mais en haut de celle-ci (dans l'onglet du navigateur). </li>
+            </ul>
+
+    <div class="cours">
+         <div class="cours-titre">Cours</div>
+            <p>Un commentaire en HTML est un texte qui sert simplement de mémo. Il n'est pas affiché, 
+            il n'est pas lu par l'ordinateur, cela ne change rien à l'affichage de la page. Il sert aux 
+            personnes qui liront le code source de votre page. Vous pouvez utiliser les commentaires 
+            pour laisser des indications sur le fonctionnement de votre page. 
+            Cela vous permettra de vous rappeler comment fonctionne votre page si vous revenez sur 
+            votre code source après un long moment d'absence.  
+            On l’écrit comme ceci : &lt; !-- commentaire --&gt;</p>
+
+        </div>
+        </div>
+
+        <div class="step">
+            <h2>Étape 3 : Ajouter un titre à la page</h2>
+            <p>Ajoute un titre à ta page. Ce titre s'affichera dans l'onglet du navigateur lorsque quelqu'un visitera ta page. Ajoute la balise <code>&lt;title&gt;</code> dans la section <code>&lt;head&gt;</code> de ton code :</p>
+            
+            <code>
+&lt;title&gt;Ma Première Page Web&lt;/title&gt;
+            </code>
+            <p class="remark"><span class="green"><strong>Remarque :</strong></span> Pour voir tes modifications tu dois enregistrer le fichier (raccourci clavier : ctrl+S) et rafraichir ta page web dans le navigateur.</p>
+        
+
+        </div>
+
+        <div class="step">
+            <h2>Étape 4 : Ajouter un en-tête</h2>
+            <p>Maintenant, ajoutons un titre dans la page avec la balise <code>&lt;h1&gt;</code></p>
+
+            <code>
+&lt;h1&gt;Bienvenue sur ma première page web !&lt;/h1&gt;
+            </code>
+            <p>Le titre de ta page est maintenant affiché sous la forme d'un grand en-tête sur ta page web.</p>
+        
+            <div class="cours">
+                <div class="cours-titre">Cours</div>
+                <h2>🔹 Les titres en HTML</h2>
+                <p>
+                    Lorsque le contenu de votre page va s'étoffer avec de nombreux paragraphes, il va devenir 
+                    difficile pour vos visiteurs de se repérer. C'est là que les titres deviennent utiles.
+                </p>
+                <p>
+                    En HTML, on peut utiliser six niveaux de titres différents selon leur importance. On a donc six balises de titres 
+                    différentes :
+                </p>
+                <ul>
+                    <li><code class="code-noir">&lt;h1&gt;</code> : signifie « titre très important ». En général, on s'en sert pour afficher le titre de la 
+                        page au début de celle-ci.</li>
+                    <li><code class="code-noir">&lt;h2&gt;</code> : signifie « titre important ».</li>
+                    <li><code class="code-noir">&lt;h3&gt;</code> : un titre un peu moins important (un « sous-titre »).</li>
+                    <li><code class="code-noir">&lt;h4&gt;</code> : titre encore moins important.</li>
+                    <li><code class="code-noir">&lt;h5&gt;</code> : titre peu important.</li>
+                    <li><code class="code-noir">&lt;h6&gt;</code> : titre vraiment, mais alors là vraiment pas important du tout.</li>
+                </ul>
+                <p>
+                    Le navigateur affiche le titre très important en très gros, le titre un peu moins important en un peu 
+                    moins gros, etc.
+                </p>
+                <p>
+                    En pratique, on utilise rarement les 6 niveaux de titres. On préférera utiliser le langage CSS pour mettre en 
+                    forme une page web.
+                </p>
+            </div>
+            
+
+        </div>
+
+
+
+        <div class="step">
+            <h2>Étape 5 : Ajouter un paragraphe</h2>
+            <p>Ensuite, nous allons ajouter un texte sous l'en-tête avec un paragraphe. Utilise la balise <code>&lt;p&gt;</code></p>
+
+            <code>
+                <p>&lt;p&gt; Cette page est un exemple simple pour comprendre comment fonctionne HTML. Nous allons apprendre à ajouter différents types de contenu étape par étape.&lt;/p&gt;</p>
+                </code>
+            
+
+            <div class="cours">
+                <div class="cours-titre">Cours</div>
+                <h2>🔹 Les paragraphes en HTML</h2>
+                <p>
+                    La plupart du temps, lorsqu'on écrit du texte dans une page web, on le fait à l'intérieur de 
+                    paragraphes. Le langage HTML propose justement la balise <code class="code-noir">&lt;p&gt;</code> pour délimiter les paragraphes.
+                </p>
+                <ul>
+                    <li><code class="code-noir">&lt;p&gt;</code> signifie « Début du paragraphe »</li>
+                    <li><code class="code-noir">&lt;/p&gt;</code> signifie « Fin du paragraphe »</li>
+                </ul>
+                <p>
+                    On écrit le contenu du site web entre les balises <code class="code-noir">&lt;body&gt;</code> et <code class="code-noir">&lt;/body&gt;</code>
+                </p>
+                <p>
+                    Si vous voulez écrire un deuxième paragraphe, il vous suffit d'utiliser une deuxième balise <code class="code-noir">&lt;p&gt;</code>
+                </p>
+                <h2>🔹 Aller à la ligne</h2>
+                <p>
+                    Il existe une balise pour « Aller à la ligne ». C'est une balise orpheline qui sert juste à indiquer 
+                    qu'on doit aller à la ligne : <code class="code-noir">&lt;br /&gt;</code> Vous devez obligatoirement la mettre à l'intérieur d'un 
+                    paragraphe.
+                </p>
+            </div>
+            
+        </div>
+            
+
+        <div class="step">
+            <h2>Étape 6 : Ajouter une image</h2>
+            <p>Nous allons maintenant ajouter une image à la page. </p>
+            <p>Télécharge une image de ton choix sur internet et utilise la balise <code>&lt;img&gt;</code> </p>
+            <p>Assure-toi que ton image soit dans le même dossier que ton fichier HTML</p>
+
+            <code>
+&lt;img src="ton-image.jpg" alt="Description de l'image"&gt;
+            </code>
+            <p>L'attribut <code>src</code> contient le chemin de l'image, et l'attribut <code>alt</code> fournit une description de l'image.</p>
+        
+            <div class="cours">
+                <div class="cours-titre">Cours</div>
+                <h2>🔹 Les images</h2>
+                <p>
+                    Il existe différents formats d'image que l'on peut utiliser sur des sites web, et on ne doit pas les choisir au hasard. En effet, les images sont parfois volumineuses à télécharger, ce qui ralentit le temps de chargement de la page (beaucoup plus que le texte !).
+                </p>
+                
+                <h3>📌 Les Formats</h3>
+                <p>
+                    On peut enregistrer une image dans plusieurs « formats » différents. Le poids (en Ko, voire en Mo) de l'image sera plus ou moins élevé selon le format choisi et la qualité va changer. Certains formats sont plus adaptés que d'autres selon l'image (photo, dessin, etc…).
+                </p>
+                <p>
+                    Le format <strong>JPEG</strong> est conçu pour réduire le poids des photos (c'est-à-dire la taille du fichier associé), qui peuvent comporter plus de 16 millions de couleurs différentes.
+                </p>
+                <p>
+                    Le format <strong>PNG</strong> est adapté à la plupart des graphiques (en gros « à tout ce qui n'est pas une photo »). Le PNG a deux gros avantages : il peut être rendu transparent et il n'altère pas la qualité de l'image.
+                </p>
+                <p>
+                    Le format <strong>GIF</strong> est assez vieux mais reste très utilisé par habitude. Aujourd'hui, le PNG est globalement bien meilleur que le GIF : les images sont généralement plus légères et la transparence est de meilleure qualité. Néanmoins, le GIF conserve un certain avantage que le PNG n'a pas : il peut être animé.
+                </p>
+                <p>
+                    Si on résume, voici quel format adopter en fonction de l'image que vous avez :
+                </p>
+                <ul>
+                    <li>✅ Une photo : utilisez un JPEG.</li>
+                    <li>✅ N'importe quel graphique avec peu de couleurs (moins de 256) : utilisez un PNG 8 bits ou éventuellement un GIF.</li>
+                    <li>✅ N'importe quel graphique avec beaucoup de couleurs : utilisez un PNG 24 bits.</li>
+                    <li>✅ Une image animée : utilisez un GIF animé.</li>
+                </ul>
+            
+                <h3>📌 Insérer une image</h3>
+                <p>
+                    La balise qui va permettre d'insérer une image est <code class="code-noir">&lt;img /&gt;</code>. C'est une balise de type orpheline. Elle doit être accompagnée de deux attributs obligatoires :
+                </p>
+                <ul>
+                    <li><strong>src</strong> : il permet d'indiquer où se trouve l'image que l'on veut insérer. Vous pouvez soit mettre un chemin absolu soit un relatif.</li>
+                    <li><strong>alt</strong> : cela signifie « texte alternatif ». On doit toujours indiquer un texte alternatif à l'image, c'est-à-dire un court texte qui décrit ce que contient l'image. Ce texte sera affiché à la place de l'image si celle-ci ne peut pas être téléchargée (cela arrive), ou dans les navigateurs de personnes handicapées (non-voyants) qui ne peuvent malheureusement pas « voir » l'image. Cela aide aussi les robots des moteurs de recherche pour les recherches d'images.</li>
+                </ul>
+                <p>Exemple : <code class="code-noir">&lt;img src="images/montagne.jpg" alt="Photo de montagne" /&gt;</code></p>
+            
+                <h3>📌 Ajouter une infobulle</h3>
+                <p>
+                    L'attribut permettant d'afficher une bulle d'aide est le même que pour les liens : il s'agit de <code class="code-noir">title</code> Cet attribut est facultatif, contrairement à <code class="code-noir">alt</code>
+                </p>
+            
+                <h3>📌 Miniature cliquable</h3>
+                <p>
+                    Si votre image est très grosse, il est conseillé d'en afficher la miniature sur votre site. Ajoutez ensuite un lien sur cette miniature pour que vos visiteurs puissent afficher l'image en taille originale :
+                </p>
+                <pre><code class="code-noir">&lt;a href="img/montagne.jpg"&gt;&lt;img src="img/montagne_mini.jpg" alt="Photo de montagne" title="Cliquez pour agrandir" /&gt;&lt;/a&gt;</code></pre>
+                <a href="exemple.jpg"><img src="exmple.jpg" alt="Exemple" title="Cliquez pour agrandir" /></a>
+
+                <h3>📌 Insérer une image avec légende</h3>
+                <p>
+                    Si une image illustre le texte (et n'est pas seulement décorative), il est conseillé de la placer au sein d'une balise <code class="code-noir">&lt;figure&gt;</code> La balise <code class="code-noir">&lt;figcaption&gt;</code> permet d'écrire la légende de l'image.
+                </p>
+                <pre><code class="code-noir">&lt;figure&gt; &lt;img src="images/montagne.jpg" alt="Photo de montagne" /&gt; &lt;figcaption&gt;Une magnifique montagne en hiver&lt;/figcaption&gt; &lt;/figure&gt;</code></pre>
+            
+        
+        </div>
+            
+        
+        </div>
+
+        <div class="step">
+            <h2>Étape 7 : Ajouter un lien</h2>
+            <p>Ajoutons maintenant un lien. Utilise la balise <code>&lt;a&gt;</code> pour créer un lien vers une autre page ou un site web. Voici un exemple de lien vers Google :</p>
+
+            <code>
+&lt;a href="https://www.google.com" target="_blank"&gt;Visite Google&lt;/a&gt;
+            </code>
+            <p>L'attribut <code>href</code> spécifie l'URL du lien, et <code>target="_blank"</code> permet d'ouvrir le lien dans un nouvel onglet.</p>
+        
+            <div class="cours">
+                <div class="cours-titre">Cours</div>
+                <h2>🔹 Les liens</h2>
+                <p>
+                    Un lien est un texte sur lequel on peut cliquer pour se rendre sur une autre page. Il est facile de 
+                    reconnaître les liens sur une page : ils sont écrits d'une façon différente (par défaut, en bleu et 
+                    soulignés) et un curseur en forme de main apparaît lorsqu'on pointe dessus.
+                </p>
+            
+                <h3>🔸 Lien vers un autre site</h3>
+                <p>
+                    Pour faire un lien, la balise que nous allons utiliser est très simple à retenir : <code class="code-noir">&lt;a&gt;</code> 
+                    Il faut cependant lui ajouter un attribut, <code class="code-noir">href</code> pour indiquer vers quelle page le lien doit conduire. 
+                    Par exemple, le code ci-dessous est un lien qui amène vers le lycée Victor Hugo, situé à l'adresse 
+                    <a href="https://victor-hugo-colomiers.mon-ent-occitanie.fr/">Lycée Victor Hugo</a>.
+                </p>
+                <p>
+                    Si vous voulez faire un lien vers un autre site, il suffit donc de copier son adresse (on parle d'URL) 
+                    en <code class="code-noir">http://</code> Notez que certains liens commencent parfois par <code class="code-noir">https://</code> (sites sécurisés) 
+                    
+                </p>
+                
+                <p>
+                    Les liens que nous venons de voir sont appelés <strong>liens absolus</strong> car on indique l'adresse complète.
+                </p>
+            
+                <h3>🔸 Lien vers une autre page de son site</h3>
+                <p>
+                    <strong>2 pages situées dans le même dossier :</strong><br>
+                    Si les deux fichiers sont situés dans le même dossier, il suffit d'écrire comme cible du lien le nom 
+                    du fichier vers lequel on veut amener. Par exemple : <code class="code-noir">&lt;a href="page2.html"&gt;</code> On dit que c'est un 
+                    lien relatif.
+                </p>
+                <p>
+                    Exemple : <code class="code-noir">&lt;p&gt;Souhaitez-vous consulter &lt; a href="page2.html"&gt; la page 2&lt;/a&gt; ?&lt;/p&gt;</code>
+                </p>
+                
+                <p>
+                    <strong>2 pages situées dans des dossiers différents :</strong><br>
+                    Si les pages sont situées dans des dossiers différents (dans un sous-dossier par exemple), 
+                    imaginons que <code class="code-noir">page3.html</code> se trouve dans un sous-dossier appelé « pages » :
+                </p>
+                <p>
+                    Exemple : <code class="code-noir">&lt;a href="pages/page3.html"&gt;</code><br>
+                    Exemple final : <code class="code-noir">&lt;p&gt; Souhaitez-vous consulter &lt; a href="pages/page3.html"&gt; la page 3&lt;/a&gt; ?&lt;/p&gt;</code>
+                </p>
+            
+                <h3>🔸 Lien qui affiche une infobulle au survol</h3>
+                <p>
+                    Vous pouvez utiliser l'attribut <code class="code-noir">title</code> qui affiche une bulle d'aide lorsqu'on pointe sur le lien. 
+                    La bulle d'aide peut être utile pour informer le visiteur avant même qu'il n'ait cliqué sur le lien.
+                </p>
+                <p>
+                    Exemple : <code class="code-noir">&lt;p&gt;Souhaitez-vous visiter &lt;a href="https://victor-hugo-colomiers.mon-ent-occitanie.fr/" title="Vous ne le regretterez pas !"&gt;le lycée VH&lt;/a&gt; ?&lt;/p&gt;</code>
+                </p>
+            
+                <h3>🔸 Lien qui ouvre une nouvelle fenêtre</h3>
+                <p>
+                    Il est possible de « forcer » l'ouverture d'un lien dans une nouvelle fenêtre. 
+                    Pour cela, on rajoutera <code class="code-noir">target="_blank"</code> à la balise <code class="code-noir">&lt;a&gt;</code> 
+                </p>
+                <p>
+                    Exemple : <code class="code-noir">&lt;p&gt;Souhaitez-vous visiter &lt;a href="https://victor-hugo-colomiers.mon-ent-occitanie.fr/" title="Vous ne le regretterez pas !" target="_blank"&gt;OpenClassrooms&lt;/a&gt; ?&lt;/p&gt;</code>
+                </p>
+                <p>Souhaitez-vous visiter <a href="https://victor-hugo-colomiers.mon-ent-occitanie.fr/" title="Vous ne le regretterez pas !" target="_blank">le lycée VH</a> ?</p>
+                </p>
+            </div>
+            
+            <p>Maintenant rajoute 2 liens à ton fichier HTML,
+                <ul>
+                    <li>Un qui s'ouvre dans un nouvel onglet et amène à une page web de ton choix</li>
+                    <li>Créer une nouvelle page HTML avec uniquement "page 2" inscrit dans le "body" et créer un lien sur la page 1 qui amène sur cette nouvelle page</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Étape 8 : Mettre en forme le texte</h2>
+            <p>Tu peux aussi mettre en forme ton texte à l'aide de balises comme :</p>
+            <ul>
+                <li><code>&lt;strong&gt;</code> pour le texte en gras.</li>
+                <li><code>&lt;em&gt;</code> pour le texte en italique.</li>
+                <li><code>&lt;ul&gt;</code> et <code>&lt;li&gt;</code> pour créer des listes à puces.</li>
+            </ul>
+
+            <p>Voici un exemple d'une liste à puces :</p>
+
+            <code>
+&lt;ul&gt;
+    &lt;li&gt;HTML : Langage de structure&lt;/li&gt;
+    &lt;li&gt;CSS : Langage de style&lt;/li&gt;
+    &lt;li&gt;JavaScript : Langage de comportement&lt;/li&gt;
+&lt;/ul&gt;
+            </code>
+        
+
+        <div class="cours">
+            <div class="cours-titre">Cours</div>
+            <h2>🔹 Mettre en valeur</h2>
+            <p>
+                Pour mettre un peu en valeur votre texte, vous devez utiliser la balise <code class="code-noir">&lt;em&gt;</code> (Italique par défaut).
+            </p>
+            <p>
+                Pour mettre un texte bien en valeur, on utilise la balise <code class="code-noir">&lt;strong&gt;</code> qui signifie « fort » ou 
+                « important » (en gras par défaut).
+            </p>
+            <p>
+                La balise <code class="code-noir">&lt;mark&gt;</code> permet de faire ressortir visuellement une <mark>portion de texte</mark> (surligné par défaut).
+            </p>
+            <p>
+                Ces balises permettront de « marquer » ces parties de texte et on pourra changer les mises en 
+                forme par défaut avec la page CSS qui ira avec la page HTML. Le HTML définit le fond (contenu, 
+                logique des éléments) et le CSS définit la forme (apparence).
+            </p>
+            <p>
+                De nombreux programmes analysent le code source des pages web, à commencer par les robots 
+                de moteurs de recherche. Ces robots parcourent le Web en lisant le code HTML de tous les sites. 
+                Les mots-clés « importants » ont tendance à avoir plus de valeur à leurs yeux. Ainsi, si quelqu'un 
+                fait une recherche sur ces mots, il a plus de chances de tomber sur votre site.
+            </p>
+        
+            <h2>🔹 Les listes</h2>
+            <p>
+                Les listes nous permettent souvent de mieux structurer notre texte et d'ordonner nos informations.
+                Il existe deux types de listes :
+            </p>
+            <ul>
+                <li>Les listes non ordonnées (listes à puces)</li>
+                <li>Les listes ordonnées (listes numérotées ou énumérations)</li>
+            </ul>
+        
+            <h3>➡️Liste non ordonnée</h3>
+            <p>Une liste non ordonnée ressemble à ceci :</p>
+            <ul>
+                <li>Patate</li>
+                <li>Carotte</li>
+                <li>Navet</li>
+            </ul>
+            <p>
+                Une liste non ordonnée permet de créer une liste d'éléments sans notion d'ordre (il n'y a pas 
+                de « premier » ni de « dernier »). Pour cela, on utilise :
+            </p>
+            <ul>
+                <li><code class="code-noir">&lt;ul&gt;</code> pour délimiter la liste</li>
+                <li><code class="code-noir">&lt;li&gt;</code> pour délimiter chaque élément de la liste (une puce)</li>
+            </ul>
+            <p>
+                Vous pouvez ajouter autant d'éléments que vous voulez et même imbriquer des listes à puces 
+                en insérant une autre balise <code class="code-noir">&lt;ul&gt;</code> à l'intérieur d'un <code class="code-noir">&lt;li&gt;</code>
+            </p>
+        
+            <h3>➡️Liste ordonnée</h3>
+            <p>Une liste ordonnée ressemble à ceci :</p>
+            <ol>
+                <li>Patate</li>
+                <li>Carotte</li>
+                <li>Navet</li>
+            </ol>
+            <p>
+                Une liste ordonnée fonctionne de la même manière qu'une liste non ordonnée, sauf qu'on utilise 
+                la balise <code class="code-noir">&lt;ol&gt;</code> au lieu de <code class="code-noir">&lt;ul&gt;</code>
+            </p>
+            <p>
+                L'ordre dans lequel vous placez les éléments est important. Le premier <code class="code-noir">&lt;li&gt;</code> sera l'élément n°1, 
+                le second n°2, etc.
+            </p>
+        </div>
+        
+<p>Rajoute maintenant 2 listes à ton fichier HTML :</p>
+<ul>
+    <li>Une ordonnée où tu classes chronologiquement entre 4 et 6 étapes entre ton réveil et ton départ au lycée</li>
+    <li>Une non ordonnée avec tes trois matières préférés au lycée</li>
+</ul>
+<p>Pense aussi à mettre certains éléments en gras, en italique et surligné.</p>
+ 
+
+    </div>
+
+        <div class="step">
+            <h2>Étape 9 : Fin de la séance</h2>
+            <p>Quand tu as finis de t'amuser et 5min avant la fin du cours au moins, vérifie que tes fichiers sont bien enregistrés, et envoie les moi par mail sur l'ENT</p>
+<p>C'est fini pour aujourd'hui, j'espère que tu es fier de ton travail.</p>
+
+        </div>
+
+    </div>
+
+    <div style="position: fixed; bottom: 0; width: 100%; background-color: #333; color: white; text-align: center; padding: 10px;">
+        <a href="index.html" style="color: #7e7e7e; text-decoration: none;">Retour à la page principale</a>
+    </div>
+
+    
+
+</body>
+</html>
