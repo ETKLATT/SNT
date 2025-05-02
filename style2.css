@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: aquamarine;
+  margin: 0;
+  padding: 0;
+}
+
+.entete {
+  display: flex;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+  position: fixed;
+  top: 0;
+  letter-spacing: 3px;
+  text-align: center;
+  width: 100%;
+  background-color: gold;
+  height: 60px;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px #fff, -1px -1px 1px #000;
+}
+
+.menugauche {
+  position: fixed;
+  text-align: center;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding-top: 20px;
+  background-color: blueviolet;
+}
+
+.pied {
+  position: fixed;
+  bottom: 0%;
+  height: 20px;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  padding: 20px;
+  margin: 0px;
+  z-index: 11;
+}
+
+.containerglobal {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-bottom: 80px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.containerglobal h1 {
+  text-align: center;
+  padding: 20px;
+  text-shadow: 10px 10px 10px;
+}
+
+#image {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.rectanglerouge1 {
+  display: flex;
+  float: left;
+  position: relative;
+  background-color: rgba(255, 0, 0, 0.5);
+  width: 30%;
+  border-radius: 20px 0 20px 0;
+  padding: 20px;
+  margin: 30px;
+  border: 3px solid black;
+  box-shadow: 10px 10px 10px 10px rgb(75, 158, 143);
+}
+
+.rectanglerouge2 {
+  display: flex;
+  float: right;
+  position: relative;
+  background-color: rgba(255, 0, 0, 0.5);
+  width: 80%;
+  border-radius: 20px 0 20px 0;
+  padding: 20px;
+  margin: 30px;
+  border: 3px solid black;
+  box-shadow: 10px 10px 10px 10px rgb(75, 158, 143);
+}
+
+.text {
+  text-align: justify;
+}
+
+.bouton {
+  padding: 15px;
+  background-color: pink;
+  border-radius: 10px;
+  width: 150px;
+}
+
+button:hover {
+  background-color: gold;
+}
+
+button {
+  cursor: pointer;
+}
