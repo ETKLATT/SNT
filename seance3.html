@@ -1,61 +1,207 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TP Séance 3 - Créez votre page web</title>
-    <link rel="stylesheet" href="style.css">
-   </head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <div class="container">
-        <h1>TP Séance 3 : Création de votre propre page web</h1>
-        <p>Dans cette séance et la prochaine, vous allez créer votre propre site web sur le thème de votre choix.</p> 
-            <p>Ce travail fera l'object d'une note sur 20 et sera à me renvoyer par mail le vendredi 16 mai à minuit au plus tard.</p>
-            <p><em>Tout retard entrainera un retrait d'un point par jour de retard sur la note finale. </em></p>
-        <h2>Votre site doit contenir :</h2>
+      <h1>TP Séance 3 : Création de votre propre page web</h1>
+      <p>
+        Dans cette séance et les prochaines, vous allez créer et mettre en page,
+        grace au CSS, votre propre site web sur le thème de votre choix.
+      </p>
+      <p>
+        Ce travail fera l'object d'une note sur 20
+        <!-- et sera à me renvoyer par
+        mail le vendredi 16 mai à minuit au plus tard. -->
+      </p>
+      <!--<p><em>Tout retard entrainera un retrait d'un point par jour de retard sur la note finale. </em></p>-->
+      <!-- <h2>Votre site doit contenir :</h2>
 
+      <ul>
+        <li>Au moins deux pages HTML relié avec un lien hypertexte</li>
+        <li>Des <strong>titres</strong> de différents niveaux</li>
+        <li>
+          Des <u>mots soulignés</u>, en <em>italique</em> et en
+          <span style="color: green">couleur</span>
+        </li>
+        <li>Des listes ordonnées et non ordonnées</li>
+        <li>Des <a href="#liens">liens internes</a></li>
+        <li>Des liens externes ouvrant une nouvelle fenêtre</li>
+        <li>Des images</li>
+        <li>Un lien pour envoyer un e-mail</li>
+        <li>Un fichier .css qui personnalisera vos pages</li>
+        <li>Un paragraphe coloré grâce au CSS</li>
+        <li>Un fond de couleur personnalisé pour la page</li>
+        <li>Un tableau simple</li>
+        <li>
+          Laissez des commentaire pour expliquer le fonctionnement de votre code
+        </li>
+      </ul>
+
+      <p>
+        Cette liste est non exhaustive et ne constitue pas l'intégralité des
+        critères de notation, laissez libre cours à votre imagination !
+      </p> -->
+
+      <div class="remarkred">
+        <span>ATTENTION :</span>
+        <p>L’esthétique des pages et l'orthographe seront prises en compte.</p>
+        <p>
+          Il faut, en plus, que toutes les contraintes (pas encore données)
+          soient respectées, que les pages s’affichent correctement et que les
+          liens fonctionnent.
+        </p>
+      </div>
+
+      <h2 class="darkblue">Conseils :</h2>
+
+      <div class="remarkblue">
         <ul>
-            <li>Au moins deux pages HTML relié avec un lien hypertexte</li>
-            <li>Des <strong>titres</strong> de différents niveaux</li>
-            <li>Des <u>mots soulignés</u>, en <em>italique</em> et en <span style="color: green;">couleur</span></li>
-            <li>Des listes ordonnées et non ordonnées</li>
-            <li>Des <a href="#liens">liens internes</a></li>
-           <li>Des liens externes ouvrant une nouvelle fenêtre</li>
-            <li>Des images</li>
-            <!--<li>Un lien pour envoyer un e-mail</li>-->
-            <li>Un fichier .css qui personnalisera vos pages</li>
-            <li>Un paragraphe coloré grâce au CSS</li>
-            <li>Un fond de couleur personnalisé pour la page</li>
-            <li>Un tableau simple</li>
-            <li>Laissez des commentaire pour expliquer le fonctionnement de votre code</li>
+          <li>
+            Vous pouvez vous aider du site suivant :
+            <a href="https://www.w3schools.com/tags/" target="_blank"
+              >w3schools
+            </a>
+            <br />
+            Ce dernier recense les différentes balises HTML (et CSS) existante,
+            leur utilité et vous donne la possiblité de voir et de tester à quoi
+            cela ressemble. <br />
+          </li>
+          <li>Vous avez le document de cours de CSS imprimé</li>
+          <li>Sinon google est votre ami !</li>
         </ul>
+      </div>
+      <p>
+        N'oubliez pas d'enregistrer votre fichier avec l'extension
+        <code>.html</code> et de le tester dans un navigateur.
+      </p>
 
-        <p>Cette liste est non exhaustive, laissez libre cours à votre imagination !</p>
+      <div class="containerredboutton">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="buttonred">C'est parti !</label>
+        <br />
+      </div>
 
-        <div class="remarkred">
-            <span>ATTENTION :</span>
-            <p>L’esthétique des pages et l'orthographe seront prises en compte.</p>
-            <p>Il faut, en plus, que toutes les contraintes soient respectées, que les pages s’affichent correctement et que les liens fonctionnent.</p>
-        </div>
+      <div>
+        <h2>
+          Pour ceux qui ne savent pas par où commencer voici des instruction
+          détaillés :
+        </h2>
 
-        <h2>Conseils :</h2>
-                <p>N'oubliez pas d'enregistrer votre fichier avec l'extension <code>.html</code> et de le tester dans un navigateur.</p>
-        <p>C'est parti !</p>
+        <ol>
+          <li>Ouvrir l'application VS code</li>
+          <br />
+          <li>
+            Ouvrir votre fichier HTML de la dernière séance (en haut à gauche :
+            file > open file > double clic sur votre fichier HTML qui se trouve
+            dans votre dossier créé spécialement pour cela lors de la dernière
+            séance) <br /><img
+              src="Open file.png"
+              alt="Open file"
+              width="90%"
+            />
+          </li>
+          <br />
+          <li>
+            Pour ceux dont le fichier n'a pas été enregistré sous l'extension
+            HTML la dernière fois (Vous pouvez trouver cette information dans
+            votre barème de notation de la dernière séance, ou juste observer si
+            le nom du fichier termine par .html) faîtes en haut a gauche file >
+            save as > et réenregistez votre fichier avec l'extension .htlm par
+            dessus l'ancien fichier (donc avec le même nom)
+          </li>
+          <br />
+          <li>
+            Maintenant créez un nouveau fichier (en haut à gauche : file > New
+            Text File)
+          </li>
+          <br />
+          <li>
+            Enregistrez ce nouveau fichier en le nommant "style" et en faisant
+            bien attention à choisir l'extension .css. Pensez egalement à
+            l'enregistrer dans votre dossier relatif a ce TP.
+            <br />
+            <img src="Saveascss.png" alt="Save as CSS" width="90%" />
+            <br />
+            Ce fichier sera le fichier CSS qui va permettre de mettre de la mise
+            en page dans votre page web (couleur, background, police, etc...)
+          </li>
+          <br />
+          <li>
+            Placez cette ligne de code :
+            <code>&lt;link rel="stylesheet" href="style.css" /&gt;</code> dans
+            le &lt;head&gt; du HTML <br />
+            Elle qui indique que ce fichier HTML est associé à un fichier appelé
+            style.css et chargé de la mise en forme.
+          </li>
+          <br />
+          <li>
+            Modifier le fichier html pour créez votre page web, et construire en
+            parallèle le fichier css pour la mise en page, à l'aide des
+            documents concernant le language css fournis
+          </li>
+          <br />
+          <li>
+            Vous avec <a href="index2.html" target="_blank">ici</a> un exemple
+            pour vous inspirer. Si vous faites clique droit sur la page, puis
+            "code source de la page" vous avez accès au code HTML qui m'a permis
+            de faire cette page. Cela est valable pour tout les site sur
+            internet, vous pourrez vous amuser à tester chez vous.
+            <br />
+            <a href="index3.html" target="_blank">Ici</a> vous avez le même site
+            mais sans CSS, pour vous monter la différence.
+          </li>
+        </ol>
 
-        <p>Voici quelques idées de sites web que vous pouvez créer pour vous inspirer dans votre projet, il n'y a aucune obligation, ce ne sont que des exemple pour vous inspirer:</p>
+        <p style="margin-top: 80px">
+          Voici quelques idées de sites web que vous pouvez créer pour vous
+          inspirer dans votre projet, il n'y a aucune obligation, ce ne sont que
+          des exemple pour vous inspirer:
+        </p>
         <ul>
-            <li><strong>Mon film préféré</strong> : Créez une page sur votre film préféré, avec une description, des critiques et des images. Exemple : un site sur <i>Avengers</i> ou <i>Harry Potter</i>.</li>
-            <li><strong>Ma série TV préférée</strong> : Parlez de votre série préférée, avec des résumés des épisodes, des personnages et pourquoi vous aimez cette série. Exemple : un site sur <i>Stranger Things</i> ou <i>Friends</i>.</li>
-            <li><strong>Ma musique préférée</strong> : Faites un site sur un groupe, un artiste ou un genre musical que vous aimez. Vous pouvez ajouter des clips vidéo, des paroles de chansons, ou des photos. Exemple : un site sur <i>Ed Sheeran</i> ou <i>Daft Punk</i>.</li>
-            <li><strong>Un hobby ou une passion</strong> : Parlez d'un de vos hobbies comme le sport, les jeux vidéo, la photographie, etc. Expliquez ce que vous aimez et partagez des astuces ou des conseils. Exemple : un site sur <i>le football</i> ou <i>les jeux de société</i>.</li>
-            <li><strong>Un site de présentation personnelle</strong> : Créez un site où vous vous présentez. Vous pouvez parler de vos loisirs, de vos études, et de ce que vous aimez faire. Exemple : un site pour vous faire connaître par vos amis ou votre famille.</li>
+          <li>
+            <strong>Mon film préféré</strong> : Créez une page sur votre film
+            préféré, avec une description, des critiques et des images. Exemple
+            : un site sur <i>Avengers</i> ou <i>Harry Potter</i>.
+          </li>
+          <li>
+            <strong>Ma série TV préférée</strong> : Parlez de votre série
+            préférée, avec des résumés des épisodes, des personnages et pourquoi
+            vous aimez cette série. Exemple : un site sur
+            <i>Stranger Things</i> ou <i>Friends</i>.
+          </li>
+          <li>
+            <strong>Ma musique préférée</strong> : Faites un site sur un groupe,
+            un artiste ou un genre musical que vous aimez. Vous pouvez ajouter
+            des clips vidéo, des paroles de chansons, ou des photos. Exemple :
+            un site sur <i>Ed Sheeran</i> ou <i>Daft Punk</i>.
+          </li>
+          <li>
+            <strong>Un hobby ou une passion</strong> : Parlez d'un de vos
+            hobbies comme le sport, les jeux vidéo, la photographie, etc.
+            Expliquez ce que vous aimez et partagez des astuces ou des conseils.
+            Exemple : un site sur <i>le football</i> ou
+            <i>les jeux de société</i>.
+          </li>
+          <li>
+            <strong>Un site de présentation personnelle</strong> : Créez un site
+            où vous vous présentez. Vous pouvez parler de vos loisirs, de vos
+            études, et de ce que vous aimez faire. Exemple : un site pour vous
+            faire connaître par vos amis ou votre famille.
+          </li>
         </ul>
-       
+      </div>
     </div>
 
-    <div style="position: fixed; bottom: 0; width: 100%; background-color: #333; color: white; text-align: center; padding: 10px;">
-        <a href="index.html" style="color: #7e7e7e; text-decoration: none;">Retour à la page principale</a>
+    <div class="footer">
+      <a href="index.html" style="color: #7e7e7e; text-decoration: none"
+        >Retour à la page principale</a
+      >
     </div>
-    
-</body>
+  </body>
 </html>
