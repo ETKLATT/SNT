@@ -26,7 +26,7 @@
         mais sans CSS, pour vous montrer la différence.
       </p>
       <p>
-        Ce travail fera l'object d'une note sur 20
+        Ce travail fera l'objet d'une note sur 20
         <!-- et sera à me renvoyer par
         mail le vendredi 16 mai à minuit au plus tard. -->
       </p>
@@ -146,9 +146,12 @@
           <li>
             Placez cette ligne de code :
             <code>&lt;link rel="stylesheet" href="style.css" /&gt;</code> dans
-            le &lt;head&gt; du HTML <br />
+            le &lt;head&gt; du HTML (Attention, pas dans le fichier CSS ! Pour
+            l'instant le fichier CSS est vide a priori)<br />
             Elle qui indique que ce fichier HTML est associé à un fichier appelé
             style.css et chargé de la mise en forme.
+            <br />
+            <img src="linkcss.png" alt="link CSS" width="90%" />
           </li>
           <br />
           <li>
@@ -157,6 +160,64 @@
             documents concernant le language css fournis
           </li>
           <br />
+          <li>
+            Maintenant essayer de mettre un fond coloré sur votre site web. Pour
+            cela, vous allez appliquer un "background" à tout le fichier HTML.
+            Comment faire cela ? en appliquant ce "background" à la balise
+            "body". Regarde l'image ci dessous et fait pareil en choisissant la
+            couleur de ton choix !
+            <br />
+            <img src="BackgroundCSS.png" alt="Background CSS" width="90%" />
+          </li>
+          <br />
+          <li>
+            Maintenant essayez d'ajouter d'autres effets de style avec le
+            fichier CSS.
+            <br />
+            Tu peux par exemple mettre tout les titres H1 d'une certaine couleur
+            (avec "color"), d'une certaine taille avec "font-size"), leur
+            ajoutet un effet d'ombre (avec text-shadow, suivit de 3 valeurs en
+            pixel puis d'une couleur comme par exemple 5px 5px 5px grey),
+            espacer les lettres (avec letter-spacing)
+          </li>
+          <br />
+          <li>
+            Si tu veux créer des "boîtes colorées", tu peux utiliser la balise
+            "div" dans le HTML
+            <br />
+            <ul>
+              <li>
+                Encadre la partie de ton code, dans le fichier HTML, que tu
+                souhaites voir dans une "boîte" (dans un encadré de couleur en
+                quelquesorte) dans une balise "div" (n'oublies pas la balise de
+                fermeture).
+                <br />
+                "div" signifie "division".
+              </li>
+              <br />
+              <li>
+                Ensuite ajoute une "classe" à cette balise de type div, comme
+                montré sur la captue d'écran qui suit. Dans cette exemple cette
+                classe s'appelle "menugauche" mais tu peux lui donner le nom que
+                tu veux (reste cohérent avec son utilité). L'important est que
+                lorsque tu décriras ses caractéristiques dans le fichier CSS,
+                son nom reste le même.
+                <img src="exempleDIV.png" alt="Exemple DIV" width="90%" />
+              </li>
+              <br />
+              <li>
+                Maintanant il faut aller décrire cette "classe" dans le fichier
+                CSS. Eh oui sinon cela ne fera rien du tout sur la page web.
+                Pour cela, il va falloir décrire les caractéristiques de cette
+                classe dans le fichier CSS. On ouvre le fichier CSS, et on tape
+                .menugauche (ou peu importe le nom que vous lui avez donné),
+                puis les symboles { et } et c'est entre ces deux symboles que
+                l'on listera les caractéristiques voulues.
+                <br />
+                <img src="menugauche.png" alt="capture d'écran menu gauche" />
+              </li>
+            </ul>
+          </li>
         </ol>
 
         <p style="margin-top: 80px">
