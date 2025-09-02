@@ -1,50 +1,210 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNT: Le Web</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="sidebar">
-        <a href="seance1.html" class="button" >Séance 1</a>
-        <a href="#" class="button" onclick="demanderCode('seance2.html')">Séance 2</a>
-        <a href="#" class="button" onclick="demanderCode('seance3.html')">Séance 3</a>
-        <a href="#" class="button" onclick="demanderCode('seance4.html')">Séance 4</a>
-    </div>
-    
-    <div class="content">
-        <h1>SNT : Le web</h1>
-        <p class="white-text"><strong>Bienvenue sur mon site de SNT spécial Web. 
-            Dans cette première séance, nous allons poser les bases de notre parcours et découvrir les fondamentaux du web et de l'informatique. 
-            À partir de la Séance 2, nous commencerons à aborder les aspects pratiques du codage en HTML, avec pour objectif final de créer et de structurer une page web complète lors des séances 3 et 4. 
-            Ces séances vont nous permettre de comprendre comment le web fonctionne, de découvrir les outils et langages qui le composent, et de développer les compétences nécessaires pour concevoir un site web de A à Z.</strong>
-            <br><br> Cliquez sur une séance pour y accéder.</p>
-        
-        <div class="gif-container">
-            <img src="trex.gif" alt="T-rex" class="gif">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil SNT</title>
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="mascotte-container">
+        <img src="Images/Mascotte.png" alt="Mascotte" class="mascotte-image" />
+        <div class="mascotte-bulle">
+          <p>
+            <strong>
+              À chaque cours de SNT, il sera obligatoire d'amener :
+            </strong>
+            <br />
+            <ul>
+            <li>Des écouteurs ou un casque (en branchement jack 3,5 mm uniquement,
+            pas en bluetooth) </li>
+            <li>Ses codes de connexion </li>
+            <li>Un porte-vues et quelques feuilles de copies</li>
+            </ul>
+          </p>
         </div>
+      </div>
+    </header>
+    <br />
+    <h1 class="snt-title">SNT</h1>
+
+    <!-- <div class="mascotte-container">
+      <img src="Images/Mascotte.png" alt="Mascotte" class="mascotte-image" />
+      <div class="mascotte-bulle">
+        <p>
+          A chaque cours de SNT, il sera obligatoire d'amener : Des écouteurs ou
+          un casque (en branchement jack 3,5 mm uniquement, pas en bluetooth) un
+          porte-vues quelques feuilles de copies
+        </p>
+      </div>
     </div>
 
-    <div class="footer">
-        <p>Étienne Klatt - Lycée Victor Hugo</p>
+    <h1 class="snt-title">SNT</h1> -->
+    <div class="container">
+
+      <!-- 1. Internet 🌐 et Le Web 🕸️ (Les Fondations)
+
+Il est crucial de commencer par ces deux thèmes. Internet est l'infrastructure physique et logique, le "réseau des réseaux". Comprendre comment les informations circulent est la base de tout. Le Web, qui s'appuie sur Internet, est l'interface que les élèves utilisent au quotidien. Aborder ces deux thèmes en premier permet d'ancrer le cours dans leur réalité numérique, en expliquant le rôle des URL, du protocole HTTP, et du langage HTML/CSS, qu'ils peuvent manipuler directement. -->
+
+      <a href="internet.html" class="theme theme7">
+        <i class="fas fa-network-wired"></i>
+        <span>Internet</span>
+      </a>
+      <a href="web.html" class="theme theme6">
+        <i class="fas fa-globe"></i>
+        <span>Le Web</span>
+      </a>
+
+      <!-- 2. Les Réseaux sociaux 🤳 (Les Usages)
+
+Une fois que les élèves ont compris les fondements du Web, il est pertinent d'aborder les réseaux sociaux. Ce thème est directement lié au Web et permet d'explorer des concepts concrets comme l'identité numérique, la e-réputation, la confidentialité des données et la viralité de l'information. C'est un sujet très engageant qui soulève des questions de société importantes. -->
+
+      <a href="reseaux_sociaux.html" class="theme theme5">
+        <i class="fas fa-hashtag"></i>
+        <span>Réseaux sociaux</span>
+      </a>
+
+      <!-- 3. Localisation, cartographie et mobilité 📍 (Les Données en Mouvement)
+
+Ce thème se connecte bien avec les réseaux (et Internet) et l'utilisation quotidienne des smartphones. Il permet de comprendre comment la géolocalisation fonctionne (GPS, Wi-Fi, etc.), comment les données cartographiques sont construites (avec des notions de graphes) et comment les services de cartographie calculent des itinéraires. Il fait le lien entre le monde physique et le numérique. -->
+
+      <a href="Thème 1 - Géolocalisation.html" class="theme theme3">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>Géolocalisation</span>
+      </a>
+
+<!-- 4. Les Données structurées et leur traitement 📊 (L'Exploitation des Données)
+
+Après avoir vu les données de géolocalisation, il est logique de passer à l'étude des données de manière plus générale. Ce thème permet de découvrir la structure des données (tableaux, bases de données) et d'apprendre à les manipuler pour en extraire des informations. C'est une introduction à la programmation et à la pensée logique, et c'est une compétence essentielle dans le monde actuel. -->
+
+      <a href="donnees.html" class="theme theme4">
+        <i class="fas fa-database"></i>
+        <span>Données structurées et traitement</span>
+      </a>
+
+<!-- 5. La Photographie numérique 📸 (Le Cas Pratique)
+
+Ce thème est une excellente application pratique des notions de données et de codage. Il permet de comprendre comment une image est stockée (pixels, RVB, métadonnées) et de réaliser des traitements simples (noir et blanc, filtres) en programmant. C'est un sujet ludique qui rend les concepts abstraits plus concrets. -->
+
+      <a href="photographie.html" class="theme theme1">
+        <i class="fas fa-camera"></i>
+        <span>Photographie numérique</span>
+      </a>
+
+<!-- 6. Informatique embarquée et objets connectés 🤖 (L'Avenir)
+
+Ce thème est souvent le plus éloigné de l'expérience quotidienne des élèves, bien qu'ils interagissent avec ces objets (montres connectées, assistants vocaux). Le placer en dernier permet de capitaliser sur toutes les notions vues précédemment (réseaux, données, programmation) pour comprendre comment ces objets fonctionnent et les défis qu'ils représentent en termes de sécurité et de vie privée. -->
+
+      <a href="objets_connectes.html" class="theme theme2">
+        <i class="fas fa-microchip"></i>
+        <span>Informatique embarquée et objets connectés</span>
+      </a> 
+      
+      </div>
+
+    <div id="bird" aria-label="Oiseau en vol" role="img">
+      <svg
+        viewBox="0 0 64 64"
+        width="100"
+        height="100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- Corps -->
+        <ellipse cx="32" cy="32" rx="15" ry="10" fill="#555" />
+        <!-- Aile gauche -->
+        <path class="wing" fill="#888" d="M17 32 Q10 20 20 25 Q25 30 17 32 Z" />
+        <!-- Aile droite -->
+        <path class="wing" fill="#888" d="M47 32 Q54 20 44 25 Q39 30 47 32 Z" />
+        <!-- Tête -->
+        <circle cx="45" cy="25" r="6" fill="#555" />
+        <!-- Bec -->
+        <polygon points="51,25 56,22 56,28" fill="#ffa500" />
+        <!-- Yeux -->
+        <circle cx="43" cy="23" r="1.5" fill="#000" />
+      </svg>
     </div>
 
-    
     <script>
-        function demanderCode(page) {
-            var code = prompt("Veuillez entrer le mot de passe pour accéder à cette séance:");
-            if (code === "4321") {
-                window.location.href = page;
-            } else {
-                alert("Mot de passe incorrect. Essayez à nouveau.");
-            }
+      const bird = document.getElementById("bird");
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+
+      // Variables pour animation
+      let startTime = null;
+      let duration = 12000 + Math.random() * 8000; // durée entre 12 et 20 secondes
+      let pathFunction;
+
+      // Génère une trajectoire de type sinusoïdale + courbe Bézier simplifiée
+      function generatePath() {
+        // Amplitude et fréquence aléatoires pour le mouvement vertical sinusoïdal
+        const amplitude = 50 + Math.random() * 100; // entre 50 et 150 px
+        const frequency = 0.002 + Math.random() * 0.003; // entre 0.002 et 0.005
+
+        // hauteur de base (entre 10% et 70% de l'écran)
+        const baseY = screenHeight * (0.1 + Math.random() * 0.6);
+
+        return function (t) {
+          // t entre 0 et 1 (progression du vol)
+          const x = t * (screenWidth + 150) - 150; // commence hors écran à gauche (-150)
+          // combinaison sinusoïde + petite variation aléatoire
+          const y =
+            baseY +
+            Math.sin(t * 2 * Math.PI * 3) * amplitude +
+            Math.sin(t * 15 * Math.PI) * 10;
+          return { x, y };
+        };
+      }
+
+      // Déplacement du bird
+      function animateBird(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        const t = elapsed / duration; // progression 0 à 1
+
+        if (t > 1) {
+          // Fin du vol -> reset
+          startTime = timestamp;
+          duration = 12000 + Math.random() * 8000;
+          pathFunction = generatePath();
+          // cache l'oiseau hors écran avant nouveau départ
+          bird.style.transform = `translate(-150px, ${screenHeight}px)`;
+          requestAnimationFrame(animateBird);
+          return;
         }
+
+        const pos = pathFunction(t);
+        bird.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
+
+        requestAnimationFrame(animateBird);
+      }
+
+      // Démarre l'animation, une fois tous les 3 minutes
+      function startFlight() {
+        startTime = null;
+        duration = 12000 + Math.random() * 8000;
+        pathFunction = generatePath();
+        bird.style.opacity = "1";
+        requestAnimationFrame(animateBird);
+      }
+
+      // Premier vol au chargement avec petit délai
+      setTimeout(startFlight, 1000);
+
+      // Lancer toutes les 3 minutes (180000 ms)
+      setInterval(() => {
+        startFlight();
+      }, 180000);
     </script>
 
-     <!-- Inclusion du fichier JavaScript -->
-     <script src="inactivity.js"></script>
-
-</body>
+    <footer class="page-footer theme0">
+      M.KLATT - SNT - Lycée Victor Hugo
+    </footer>
+  </body>
 </html>
